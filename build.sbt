@@ -23,10 +23,11 @@ lazy val deps = libraryDependencies ++= Seq(
 )
 
 lazy val esDeps = libraryDependencies ++= Seq(
-  "com.sksamuel.elastic4s" %% "elastic4s-core"          % Version.es,
-  "com.sksamuel.elastic4s" %% "elastic4s-client-esjava" % Version.es,
-  "com.sksamuel.elastic4s" %% "elastic4s-http-streams"  % Version.es,
-  "com.sksamuel.elastic4s" %% "elastic4s-testkit"       % Version.es % "test"
+  "com.sksamuel.elastic4s" %% "elastic4s-core"         % Version.es,
+  "com.sksamuel.elastic4s" %% "elastic4s-http-streams" % Version.es,
+  "com.sksamuel.elastic4s" %% "elastic4s-embedded"     % Version.es
+  // "com.sksamuel.elastic4s" %% "elastic4s-client-esjava" % Version.es,
+  // "com.sksamuel.elastic4s" %% "elastic4s-testkit"       % Version.es % "test"
 )
 
 lazy val root = (project in file("."))

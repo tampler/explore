@@ -3,5 +3,5 @@ object Version {
 
   val accord = "0.7.6"
   val joda   = "2.10.5"
-  val es     = "7.6.0"
+  val es     = "6.7.4"
 }
