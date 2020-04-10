@@ -27,7 +27,14 @@ lazy val esDeps = libraryDependencies ++= Seq(
   "com.sksamuel.elastic4s" %% "elastic4s-http-streams" % Version.es,
   "com.sksamuel.elastic4s" %% "elastic4s-embedded"     % Version.es
   // "com.sksamuel.elastic4s" %% "elastic4s-client-esjava" % Version.es,
-  // "com.sksamuel.elastic4s" %% "elastic4s-testkit"       % Version.es % "test"
+  // "com.sksamuel.elastic4s" %% "elastic4s-testkit"       % Version.es % "test"f
+)
+
+lazy val sttpDeps = libraryDependencies ++= Seq(
+  "com.softwaremill.sttp.client" %% "core"                          % Version.sttp,
+  "com.softwaremill.sttp.client" %% "circe"                         % Version.sttp,
+  "com.softwaremill.sttp.client" %% "async-http-client-backend-zio" % Version.sttp,
+  "io.circe"                     %% "circe-generic"                 % Version.circe
 )
 
 lazy val root = (project in file("."))
@@ -41,6 +48,7 @@ lazy val root = (project in file("."))
     deps,
     zioDeps,
     esDeps,
+    sttpDeps,
     testFrameworks := Seq(new TestFramework("zio.test.sbt.ZTestFramework"))
   )
 
